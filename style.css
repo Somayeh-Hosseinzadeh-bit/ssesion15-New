@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    background:linear-gradient(white, aqua);
+    font-family: arial;
+    font-size: 15px;
+    line-height: 1.2em;
+}
+#grid-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    grid-template-rows: minmax(50px, auto) minmax(50px, auto) minmax(50px, auto); /* 50px 1fr 50px */
+
+    grid-template-areas: "side header header"
+                         "side section1 asid"
+                         "side section3  asid"
+                         "side section4  asid";
+}
+li{
+    list-style-type: none;
+}
+.side{
+    grid-area: side;
+}
+
+header{
+    grid-area: header;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+}
+header h1{
+    font-style: italic;
+    margin-bottom:5px;
+}
+header span{
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: gray;
+}
+.headermeno{
+    display: flex;
+}
+.headermeno li{
+    padding: 0px 3px 0 10px;
+}
+.headermeno a:hover{
+    color: indianred;
+}
+#section1,#section2,#section3,#section4 {
+    background-color: white;
+    margin: 0px 0 20px 0 ;
+    border: 1px solid gray;
+    padding: 20px 10px 20px 10px;
+}
+/* section1 */
+#section1{
+    grid-area:section1;
+}
+#section1 img{
+    float: right;
+}
+/* section2 */
+#section2{
+    grid-area: asid;
+    margin: 0px 0px 0 20px;
+    height: 250px;
+}
+#section2 h4{
+    margin: 10px 0 10px 0;
+}
+#section2 p{
+    font-size: 12px;
+}
+#section2 hr{
+    margin: 10px 0 10px 0;
+    border-style:1px dashed;
+}
+#section3{
+    grid-area: section3;
+}
+#section3 img{
+    float: right;
+}
+#section4{
+    grid-area: section4;
+}
+#section4 img{
+    float: right;
+}
